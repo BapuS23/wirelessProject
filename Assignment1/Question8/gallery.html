@@ -3,127 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My College - Gallery</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <title>Gallery - XYZ College</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Header Styling */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #003366;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1rem;
+            padding: 8px 15px;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background: #ffcc00;
+            color: #003366;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 50px 20px;
+            background: white;
+            max-width: 1200px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #003366;
+            border-bottom: 3px solid #ffcc00;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .gallery-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            display: block;
+            transition: 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+            filter: brightness(80%);
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 51, 102, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #003366;
+            color: white;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="site-header">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">My College</a>
-            </div>
-            <nav class="main-nav">
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="academics.html">Academics</a></li>
-                    <li><a href="admission.html">Admission</a></li>
-                    <li><a href="gallery.html" class="active">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>Gallery</h1>
-            <p>Explore our campus and student life through these images.</p>
-        </div>
-    </section>
+<header>
+    <h1>IET College - Gallery</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="admission.html">Admissions</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <!-- Gallery Section -->
-    <section class="gallery-section">
-        <div class="container">
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://via.placeholder.com/600x400" alt="College campus main building">
-                    <div class="gallery-caption">Main Building</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://via.placeholder.com/600x400" alt="College library">
-                    <div class="gallery-caption">Library</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://via.placeholder.com/600x400" alt="Science laboratory">
-                    <div class="gallery-caption">Science Lab</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://via.placeholder.com/600x400" alt="Computer lab">
-                    <div class="gallery-caption">Computer Lab</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://via.placeholder.com/600x400" alt="Sports field">
-                    <div class="gallery-caption">Sports Field</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://via.placeholder.com/600x400" alt="Auditorium">
-                    <div class="gallery-caption">Auditorium</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://via.placeholder.com/600x400" alt="Cafeteria">
-                    <div class="gallery-caption">Cafeteria</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://via.placeholder.com/600x400" alt="Student lounge">
-                    <div class="gallery-caption">Student Lounge</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://via.placeholder.com/600x400" alt="Graduation ceremony">
-                    <div class="gallery-caption">Graduation Ceremony</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://via.placeholder.com/600x400" alt="Cultural event">
-                    <div class="gallery-caption">Cultural Event</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://via.placeholder.com/600x400" alt="Research presentation">
-                    <div class="gallery-caption">Research Presentation</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://via.placeholder.com/600x400" alt="Campus garden">
-                    <div class="gallery-caption">Campus Garden</div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="gallery-section">
+    <h2>Our College Gallery</h2>
+    <p>Explore our vibrant campus, library, sports activities, and student life.</p>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>My College</h3>
-                    <p>Empowering futures through education</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="academics.html">Academics</a></li>
-                        <li><a href="admission.html">Admission</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact Us</h4>
-                    <p>123 College Street, City, State 12345</p>
-                    <p>Phone: (123) 456-7890</p>
-                    <p>Email: info@mycollege.edu</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 My College. All rights reserved.</p>
-            </div>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="campus.jpg" alt="Campus">
+            <div class="overlay">Campus View</div>
         </div>
-    </footer>
+        <div class="gallery-item">
+            <img src="library.jpg" alt="Library">
+            <div class="overlay">Library & Resources</div>
+        </div>
+        <div class="gallery-item">
+            <img src="sports.jpg" alt="Sports">
+            <div class="overlay">Sports Facilities</div>
+        </div>
+        <div class="gallery-item">
+            <img src="classroom.jpg" alt="Classroom">
+            <div class="overlay">Modern Classrooms</div>
+        </div>
+        <div class="gallery-item">
+            <img src="laboratory.jpg" alt="Laboratory">
+            <div class="overlay">Advanced Labs</div>
+        </div>
+        <div class="gallery-item">
+            <img src="graduation.webp" alt="Graduation">
+            <div class="overlay">Graduation Ceremony</div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 XYZ College. All rights reserved.</p>
+</footer>
+
 </body>
 </html>

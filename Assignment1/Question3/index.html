@@ -7,93 +7,61 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
         }
         h2 {
-            color: red;
+            color: #333;
+            margin-bottom: 20px;
         }
         table {
-            width: 50%;
-            margin: auto;
-            border-collapse: collapse;
-            text-align: left;
+            width: 60%;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
         th, td {
-            border: 1px solid black;
-            padding: 8px;
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
         }
         th {
-            background-color: #f2f2f2;
-            text-align: center;
+            background: #007BFF;
+            color: white;
+            font-size: 18px;
+        }
+        tr:nth-child(even) {
+            background: #f9f9f9;
         }
     </style>
 </head>
 <body>
-
     <h2>Text Formatting Tags</h2>
-
     <table>
         <tr>
             <th>HTML Tag</th>
             <th>Output</th>
         </tr>
-        <tr>
-            <td>normal text</td>
-            <td>hello world</td>
-        </tr>
-        <tr>
-            <td>Font & its attributes</td>
-            <td><span style="font-size: 20px; font-weight: bold; color: blue;">hello world</span></td>
-        </tr>
-        <tr>
-            <td>&lt;B&gt;</td>
-            <td><b>Bold</b></td>
-        </tr>
-        <tr>
-            <td>&lt;I&gt;</td>
-            <td><i>Italic</i></td>
-        </tr>
-        <tr>
-            <td>&lt;U&gt;</td>
-            <td><u>Underline</u></td>
-        </tr>
-        <tr>
-            <td>&lt;EM&gt;</td>
-            <td><em>Emphasis</em></td>
-        </tr>
-        <tr>
-            <td>&lt;STRONG&gt;</td>
-            <td><strong>STRONG</strong></td>
-        </tr>
-        <tr>
-            <td>&lt;TELETYPE&gt;</td>
-            <td><tt>teletype</tt></td>
-        </tr>
-        <tr>
-            <td>&lt;CITE&gt;</td>
-            <td><cite>Citation</cite></td>
-        </tr>
-        <tr>
-            <td>&lt;STRIKE&gt;</td>
-            <td><strike>strike through text</strike></td>
-        </tr>
-        <tr>
-            <td>&lt;BIG&gt;</td>
-            <td><big>text in a big font</big></td>
-        </tr>
-        <tr>
-            <td>&lt;SMALL&gt;</td>
-            <td><small>text in a small font</small></td>
-        </tr>
-        <tr>
-            <td>&lt;SUB&gt;</td>
-            <td>a<sub>b</sub></td>
-        </tr>
-        <tr>
-            <td>&lt;SUP&gt;</td>
-            <td>a<sup>b</sup></td>
-        </tr>
+        <tr><td>Normal text</td><td>Hello World</td></tr>
+        <tr><td>Font & Attributes</td><td><span style="font-size: 20px; font-weight: bold; color: blue;">Hello World</span></td></tr>
+        <tr><td>&lt;b&gt;</td><td><b>Bold</b></td></tr>
+        <tr><td>&lt;i&gt;</td><td><i>Italic</i></td></tr>
+        <tr><td>&lt;u&gt;</td><td><u>Underline</u></td></tr>
+        <tr><td>&lt;em&gt;</td><td><em>Emphasis</em></td></tr>
+        <tr><td>&lt;strong&gt;</td><td><strong>Strong</strong></td></tr>
+        <tr><td>&lt;tt&gt;</td><td><tt>Teletype</tt></td></tr>
+        <tr><td>&lt;cite&gt;</td><td><cite>Citation</cite></td></tr>
+        <tr><td>&lt;strike&gt;</td><td><strike>Strike through</strike></td></tr>
+        <tr><td>&lt;big&gt;</td><td><big>Big Font</big></td></tr>
+        <tr><td>&lt;small&gt;</td><td><small>Small Font</small></td></tr>
+        <tr><td>&lt;sub&gt;</td><td>a<sub>b</sub></td></tr>
+        <tr><td>&lt;sup&gt;</td><td>a<sup>b</sup></td></tr>
     </table>
-
 </body>
 </html>

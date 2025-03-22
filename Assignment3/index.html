@@ -1,15 +1,14 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comprehensive Webpage Styling</title>
+    <title>Modern Webpage</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-   
     <header>
+        <div class="logo">Brand</div>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -19,41 +18,53 @@
             </ul>
         </nav>
     </header>
-
-    <section class="hero">
+    
+    <section id="home" class="hero">
+        <div class="overlay"></div>
         <div class="hero-content">
-            <h1>Welcome to Our Website</h1>
-            <p>We provide the best services to help you succeed.</p>
-            <button class="btn">Get Started</button>
+            <h1>Discover Innovation</h1>
+            <p>Crafting digital experiences that drive success.</p>
+            <a href="#services" class="btn">Explore More</a>
         </div>
     </section>
-
-    <section id="about" class="content-section">
-        <h2>About Us</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel orci at nisl.</p>
-    </section>
-
-    <section id="services" class="content-section">
-        <h2>Our Services</h2>
-        <div class="card">
-            <h3>Web Development</h3>
-            <p>We build modern and responsive websites.</p>
-        </div>
-        <div class="card">
-            <h3>SEO Optimization</h3>
-            <p>Improve your website's visibility on search engines.</p>
+    
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We specialize in cutting-edge technology solutions that elevate businesses to new heights.</p>
         </div>
     </section>
-
-    <!-- Footer Section -->
+    
+    <section id="services" class="section">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="grid">
+                <div class="card">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Web Development</h3>
+                    <p>Building responsive and modern websites.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3>SEO Optimization</h3>
+                    <p>Boosting your online presence effectively.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-mobile-alt"></i>
+                    <h3>App Development</h3>
+                    <p>Creating intuitive mobile applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <footer>
-        <p>Follow us on social media:</p>
-        <div class="social-icons">
+        <div class="socials">
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
             <a href="#"><i class="fa-brands fa-twitter"></i></a>
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
         </div>
-        <p>&copy; 2025 All Rights Reserved.</p>
+        <p>&copy; 2025 Modern Web. All Rights Reserved.</p>
     </footer>
 </body>
 </html>

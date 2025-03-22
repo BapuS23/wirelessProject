@@ -3,136 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heritage Sites - Rome Tourism</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <title>Asian Heritage Sites</title>
+    <style>
+        /* Global Styles */
+        body { font-family: 'Poppins', sans-serif; background: linear-gradient(to right, rgba(13, 27, 42, 0.9), rgba(198, 156, 62, 0.9)); color: white; margin: 0; padding: 0; text-align: center; }
+
+        /* Header */
+        header { background: #0D1B2A; color: white; padding: 20px; display: flex; justify-content: space-between; align-items: center; text-transform: uppercase; font-weight: bold; }
+        .logo { width: 90px; }
+        .header-links { display: flex; gap: 20px; }
+        .header-links a { text-decoration: none; color: white; font-size: 16px; padding: 10px 15px; background: #C69C3E; border-radius: 8px; transition: 0.3s; }
+        .header-links a:hover { background: #B8860B; color: white; }
+
+        /* Heritage Section */
+        .heritage-list { margin-top: 40px; }
+        .heritage-list h2 { font-size: 28px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* Heritage Grid */
+        .heritage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; padding: 20px; max-width: 900px; margin: auto; }
+        .city-card { width: 180px; height: 180px; perspective: 1000px; cursor: pointer; }
+        .city-inner { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform 0.6s ease; }
+        .city-card:hover .city-inner, .city-card.selected .city-inner { transform: scale(1.1) rotateY(180deg); }
+        .city-front, .city-back { width: 100%; height: 100%; position: absolute; backface-visibility: hidden; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; text-transform: uppercase; border-radius: 15px; }
+        .city-front { background: linear-gradient(135deg, #C69C3E, #EAB308); color: #0D1B2A; }
+        .city-back { background: black; color: white; transform: rotateY(180deg); }
+
+        /* Footer */
+        footer { text-align: center; padding: 20px; background: #0D1B2A; color: white; margin-top: 20px; }
+    </style>
 </head>
 <body>
+
+    <!-- Header -->
     <header>
-        <div class="logo-container">
-            <img src="https://via.placeholder.com/100" alt="Rome Tourism Logo" class="logo">
-            <h1>ROME</h1>
-            <p class="tagline">The Eternal City</p>
+        <img src="images/logo.png" alt="City Logo" class="logo">
+        <div class="header-links">
+            <a href="index.html">Home</a>
+            <a href="heritage.html">Heritage</a>
+            <a href="hotel_booking.html">Hotel Booking</a>
+            <a href="gallery.html">Gallery</a>
         </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="heritage.html" class="active">Heritage</a></li>
-                <li><a href="booking.html">Hotel Booking</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-            </ul>
-            <div class="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
     </header>
 
-    <main>
-        <section class="page-header">
-            <div class="container">
-                <h2>Heritage Sites of Rome</h2>
-                <p>Discover the rich history and cultural treasures of the Eternal City</p>
-            </div>
-        </section>
-
-        <section class="heritage-sites">
-            <div class="container">
-                <div class="heritage-grid">
-                    <a href="colosseum.html" class="heritage-card">
-                        <img src="https://via.placeholder.com/400x300" alt="Colosseum">
-                        <div class="heritage-overlay">
-                            <h3>The Colosseum</h3>
-                        </div>
-                    </a>
-                    <a href="vatican.html" class="heritage-card">
-                        <img src="https://via.placeholder.com/400x300" alt="Vatican City">
-                        <div class="heritage-overlay">
-                            <h3>Vatican City</h3>
-                        </div>
-                    </a>
-                    <a href="trevi-fountain.html" class="heritage-card">
-                        <img src="https://via.placeholder.com/400x300" alt="Trevi Fountain">
-                        <div class="heritage-overlay">
-                            <h3>Trevi Fountain</h3>
-                        </div>
-                    </a>
-                    <a href="pantheon.html" class="heritage-card">
-                        <img src="https://via.placeholder.com/400x300" alt="Pantheon">
-                        <div class="heritage-overlay">
-                            <h3>Pantheon</h3>
-                        </div>
-                    </a>
-                    <a href="roman-forum.html" class="heritage-card">
-                        <img src="https://via.placeholder.com/400x300" alt="Roman Forum">
-                        <div class="heritage-overlay">
-                            <h3>Roman Forum</h3>
-                        </div>
-                    </a>
-                    <a href="spanish-steps.html" class="heritage-card">
-                        <img src="https://via.placeholder.com/400x300" alt="Spanish Steps">
-                        <div class="heritage-overlay">
-                            <h3>Spanish Steps</h3>
-                        </div>
-                    </a>
-                    <a href="castel-sant-angelo.html" class="heritage-card">
-                        <img src="https://via.placeholder.com/400x300" alt="Castel Sant'Angelo">
-                        <div class="heritage-overlay">
-                            <h3>Castel Sant'Angelo</h3>
-                        </div>
-                    </a>
-                    <a href="piazza-navona.html" class="heritage-card">
-                        <img src="https://via.placeholder.com/400x300" alt="Piazza Navona">
-                        <div class="heritage-overlay">
-                            <h3>Piazza Navona</h3>
-                        </div>
-                    </a>
-                    <a href="palatine-hill.html" class="heritage-card">
-                        <img src="https://via.placeholder.com/400x300" alt="Palatine Hill">
-                        <div class="heritage-overlay">
-                            <h3>Palatine Hill</h3>
-                        </div>
-                    </a>
-                    <a href="borghese-gallery.html" class="heritage-card">
-                        <img src="https://via.placeholder.com/400x300" alt="Borghese Gallery">
-                        <div class="heritage-overlay">
-                            <h3>Borghese Gallery</h3>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="https://via.placeholder.com/80" alt="Rome Tourism Logo">
-                    <h3>Rome Tourism</h3>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="heritage.html">Heritage</a></li>
-                        <li><a href="booking.html">Hotel Booking</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact Information</h4>
-                    <p>Tourism Office of Rome</p>
-                    <p>Via del Corso 101, Rome, Italy</p>
-                    <p>Phone: +39 06 1234 5678</p>
-                    <p>Email: info@rometourism.com</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Rome Tourism. All rights reserved.</p>
-            </div>
+    <section class="heritage-list">
+        <h2>Explore Asian Heritage</h2>
+        <div class="heritage-grid">
+            <div class="city-card" onclick="selectCity(this)"><div class="city-inner"><div class="city-front">Delhi</div><div class="city-back">Red Fort</div></div></div>
+            <div class="city-card" onclick="selectCity(this)"><div class="city-inner"><div class="city-front">Agra</div><div class="city-back">Taj Mahal</div></div></div>
+            <div class="city-card" onclick="selectCity(this)"><div class="city-inner"><div class="city-front">Lahore</div><div class="city-back">Badshahi Mosque</div></div></div>
+            <div class="city-card" onclick="selectCity(this)"><div class="city-inner"><div class="city-front">Kathmandu</div><div class="city-back">Pashupatinath Temple</div></div></div>
+            <div class="city-card" onclick="selectCity(this)"><div class="city-inner"><div class="city-front">Dhaka</div><div class="city-back">Lalbagh Fort</div></div></div>
+            <div class="city-card" onclick="selectCity(this)"><div class="city-inner"><div class="city-front">Colombo</div><div class="city-back">Galle Fort</div></div></div>
+            <div class="city-card" onclick="selectCity(this)"><div class="city-inner"><div class="city-front">Bangkok</div><div class="city-back">Grand Palace</div></div></div>
+            <div class="city-card" onclick="selectCity(this)"><div class="city-inner"><div class="city-front">Beijing</div><div class="city-back">Forbidden City</div></div></div>
         </div>
-    </footer>
+    </section>
+
+    <footer><p>&copy; 2025 Asian Heritage Tourism. All rights reserved.</p></footer>
+
+    <script>
+        function selectCity(element) {
+            document.querySelectorAll('.city-card').forEach(city => city.classList.remove('selected'));
+            element.classList.add('selected');
+        }
+    </script>
+
 </body>
 </html>

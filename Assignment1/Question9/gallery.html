@@ -3,174 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Rome Tourism</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <title>Gallery | Explore [City Name]</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        /* Global Styles */
+        body { font-family: 'Poppins', sans-serif; background: #F8F9FA; color: #333; margin: 0; padding: 0; }
+        
+        /* Header */
+        header { background: #0D1B2A; color: white; padding: 20px; display: flex; justify-content: space-between; align-items: center; text-transform: uppercase; font-weight: bold; }
+        .logo { width: 90px; }
+        .header-links { display: flex; gap: 20px; }
+        .header-links a { text-decoration: none; color: white; font-size: 16px; padding: 10px 15px; background: #C69C3E; border-radius: 8px; transition: 0.3s; }
+        .header-links a:hover { background: #B8860B; color: white; }
+
+        /* Gallery Section */
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 40px; text-align: center; }
+        .gallery-item { background: rgba(13, 27, 42, 0.1); padding: 20px; border-radius: 10px; transition: transform 0.3s, box-shadow 0.3s; }
+        .gallery-item:hover { transform: translateY(-5px); box-shadow: 0px 4px 10px rgba(198, 156, 62, 0.8); }
+        .gallery-item i { font-size: 50px; color: #C69C3E; margin-bottom: 10px; }
+        .gallery-item h3 { margin: 10px 0; font-size: 20px; color: #B8860B; }
+        .gallery-item p { font-size: 14px; opacity: 0.8; }
+        
+        /* Footer */
+        footer { text-align: center; padding: 20px; background: #0D1B2A; color: white; margin-top: 20px; }
+    </style>
 </head>
 <body>
     <header>
-        <div class="logo-container">
-            <img src="https://via.placeholder.com/100" alt="Rome Tourism Logo" class="logo">
-            <h1>ROME</h1>
-            <p class="tagline">The Eternal City</p>
+        <img src="images/logo.png" alt="City Logo" class="logo">
+        <div class="header-links">
+            <a href="index.html">Home</a>
+            <a href="heritage.html">Heritage</a>
+            <a href="hotel_booking.html">Hotel Booking</a>
+            <a href="gallery.html">Gallery</a>
         </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="heritage.html">Heritage</a></li>
-                <li><a href="booking.html">Hotel Booking</a></li>
-                <li><a href="gallery.html" class="active">Gallery</a></li>
-            </ul>
-            <div class="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
     </header>
 
-    <main>
-        <section class="page-header">
-            <div class="container">
-                <h2>Photo Gallery</h2>
-                <p>Explore the beauty of Rome through our collection of images</p>
+    <!-- Gallery Section -->
+    <section>
+        <div class="gallery">
+            <div class="gallery-item">
+                <i class="fas fa-landmark"></i>
+                <h3>Historic Fort</h3>
+                <p>A grand fort with a rich history, offering breathtaking views and deep cultural significance.</p>
             </div>
-        </section>
-
-        <section class="gallery-section">
-            <div class="container">
-                <div class="gallery-filter">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="monuments">Monuments</button>
-                    <button class="filter-btn" data-filter="churches">Churches</button>
-                    <button class="filter-btn" data-filter="fountains">Fountains</button>
-                    <button class="filter-btn" data-filter="museums">Museums</button>
-                </div>
-                
-                <div class="gallery-grid">
-                    <div class="gallery-item" data-category="monuments">
-                        <img src="https://via.placeholder.com/600x400" alt="Colosseum Exterior" class="gallery-img">
-                        <div class="gallery-caption">
-                            <h3>Colosseum Exterior</h3>
-                            <p>The iconic amphitheater of ancient Rome</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-category="monuments">
-                        <img src="https://via.placeholder.com/600x400" alt="Colosseum Interior" class="gallery-img">
-                        <div class="gallery-caption">
-                            <h3>Colosseum Interior</h3>
-                            <p>Inside the ancient Roman amphitheater</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-category="churches">
-                        <img src="https://via.placeholder.com/600x400" alt="St. Peter's Basilica" class="gallery-img">
-                        <div class="gallery-caption">
-                            <h3>St. Peter's Basilica</h3>
-                            <p>The magnificent church at the heart of Vatican City</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-category="churches">
-                        <img src="https://via.placeholder.com/600x400" alt="Sistine Chapel" class="gallery-img">
-                        <div class="gallery-caption">
-                            <h3>Sistine Chapel</h3>
-                            <p>Famous for Michelangelo's ceiling frescoes</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-category="fountains">
-                        <img src="https://via.placeholder.com/600x400" alt="Trevi Fountain" class="gallery-img">
-                        <div class="gallery-caption">
-                            <h3>Trevi Fountain</h3>
-                            <p>The largest Baroque fountain in Rome</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-category="monuments">
-                        <img src="https://via.placeholder.com/600x400" alt="Roman Forum" class="gallery-img">
-                        <div class="gallery-caption">
-                            <h3>Roman Forum</h3>
-                            <p>Ancient government buildings at the center of Rome</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-category="monuments">
-                        <img src="https://via.placeholder.com/600x400" alt="Pantheon" class="gallery-img">
-                        <div class="gallery-caption">
-                            <h3>Pantheon</h3>
-                            <p>Former Roman temple with its iconic dome</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-category="fountains">
-                        <img src="https://via.placeholder.com/600x400" alt="Fountain of the Four Rivers" class="gallery-img">
-                        <div class="gallery-caption">
-                            <h3>Fountain of the Four Rivers</h3>
-                            <p>Bernini's masterpiece in Piazza Navona</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-category="museums">
-                        <img src="https://via.placeholder.com/600x400" alt="Vatican Museums" class="gallery-img">
-                        <div class="gallery-caption">
-                            <h3>Vatican Museums</h3>
-                            <p>Home to an immense collection of art</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-category="monuments">
-                        <img src="https://via.placeholder.com/600x400" alt="Spanish Steps" class="gallery-img">
-                        <div class="gallery-caption">
-                            <h3>Spanish Steps</h3>
-                            <p>The famous stairway connecting two piazzas</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-category="museums">
-                        <img src="https://via.placeholder.com/600x400" alt="Borghese Gallery" class="gallery-img">
-                        <div class="gallery-caption">
-                            <h3>Borghese Gallery</h3>
-                            <p>Art museum housing sculptures and paintings</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-category="monuments">
-                        <img src="https://via.placeholder.com/600x400" alt="Castel Sant'Angelo" class="gallery-img">
-                        <div class="gallery-caption">
-                            <h3>Castel Sant'Angelo</h3>
-                            <p>Towering cylindrical building near the Vatican</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div id="lightbox" class="lightbox">
-                    <span class="close-lightbox">&times;</span>
-                    <img class="lightbox-content" id="lightbox-img">
-                    <div id="lightbox-caption"></div>
-                </div>
+            <div class="gallery-item">
+                <i class="fas fa-church"></i>
+                <h3>Ancient Temple</h3>
+                <p>A beautifully crafted temple known for its intricate carvings and spiritual ambiance.</p>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="https://via.placeholder.com/80" alt="Rome Tourism Logo">
-                    <h3>Rome Tourism</h3>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="heritage.html">Heritage</a></li>
-                        <li><a href="booking.html">Hotel Booking</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact Information</h4>
-                    <p>Tourism Office of Rome</p>
-                    <p>Via del Corso 101, Rome, Italy</p>
-                    <p>Phone: +39 06 1234 5678</p>
-                    <p>Email: info@rometourism.com</p>
-                </div>
+            <div class="gallery-item">
+                <i class="fas fa-tree"></i>
+                <h3>Royal Gardens</h3>
+                <p>A lush green oasis in the heart of the city, perfect for relaxation and photography.</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Rome Tourism. All rights reserved.</p>
+            <div class="gallery-item">
+                <i class="fas fa-mountain"></i>
+                <h3>Scenic Hills</h3>
+                <p>A serene getaway with panoramic views, offering adventure and peace in nature.</p>
+            </div>
+            <div class="gallery-item">
+                <i class="fas fa-water"></i>
+                <h3>Beautiful Lake</h3>
+                <p>A picturesque lake ideal for boating and enjoying mesmerizing sunset views.</p>
+            </div>
+            <div class="gallery-item">
+                <i class="fas fa-building"></i>
+                <h3>City Museum</h3>
+                <p>An insightful place showcasing the city's past, art, and cultural artifacts.</p>
             </div>
         </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 [City Name] Tourism. All rights reserved.</p>
     </footer>
 </body>
 </html>

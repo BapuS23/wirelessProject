@@ -3,29 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Example in HTML</title>
+    <title>Image Showcase</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
-            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: "Arial", sans-serif;
+            background-color: #f4f4f4;
             text-align: center;
-            margin: 20px;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+        }
+        h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 15px;
         }
         img {
-            width: 400px; /* Adjust image size */
+            width: 100%;
+            max-width: 400px;
             height: auto;
-            border: 2px solid black;
             border-radius: 10px;
-            margin-top: 20px;
+            border: 3px solid #333;
         }
     </style>
 </head>
 <body>
-
-    <h2>Webpage to Include an Image</h2>
-
-    <p>This is an example of how to insert an image using the <code>&lt;img&gt;</code> tag in HTML.</p>
-
-    <img src="https://th.bing.com/th/id/OIP.j4KdqaXpnhbN94WzVyHUhAHaE8?w=246&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7" alt="Sample Image">
-
+    <div class="container">
+        <h2>Image Showcase</h2>
+        <p>Displaying an image using the <code>&lt;img&gt;</code> tag in HTML.</p>
+        <img src="https://th.bing.com/th/id/OIP.j4KdqaXpnhbN94WzVyHUhAHaE8?w=246&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7" alt="Sample Image">
+    </div>
 </body>
 </html>

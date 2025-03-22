@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Academics - IET College</title>
+  <title>Courses - XYZ College</title>
   <style>
     /* Global Styles */
     * {
@@ -29,10 +29,8 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
-    .logo {
-      font-size: 1.8rem;
-      font-weight: bold;
-      text-transform: uppercase;
+    header h1 {
+      font-size: 2rem;
     }
 
     nav ul {
@@ -74,51 +72,32 @@
       font-size: 2rem;
       margin-bottom: 20px;
       color: #003366;
+      border-bottom: 3px solid #ffcc00;
+      display: inline-block;
+      padding-bottom: 5px;
     }
 
-    ul {
-      list-style: none;
+    section p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      line-height: 1.6;
     }
 
-    ul li {
-      font-size: 1.3rem;
-      font-weight: bold;
-      margin: 20px 0;
-      padding: 10px;
+    .course-box {
       background: #003366;
       color: white;
-      display: inline-block;
-      border-radius: 5px;
-      transition: 0.3s;
+      padding: 20px;
+      margin: 20px auto;
+      width: 80%;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
     }
 
-    ul li:hover {
+    .course-box:hover {
+      transform: translateY(-5px);
       background: #ffcc00;
       color: #003366;
-    }
-
-    ul li ul {
-      margin-top: 10px;
-      padding-left: 0;
-    }
-
-    ul li ul li {
-      background: none;
-      color: #003366;
-      font-weight: normal;
-      font-size: 1.1rem;
-      padding: 8px;
-    }
-
-    ul li ul li a {
-      text-decoration: none;
-      color: #003366;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    ul li ul li a:hover {
-      color: #ffcc00;
     }
 
     /* Footer */
@@ -135,7 +114,7 @@
 <body>
 
 <header>
-  <div class="logo">IET College</div>
+  <h1>IET College - Courses</h1>
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -150,31 +129,31 @@
 </header>
 
 <section>
-  <h2>Departments</h2>
-  <ul>
-    <li>Science
-      <ul>
-        <li><a href="courses.html#cs">Computer Science</a></li>
-        <li><a href="courses.html#math">Mathematics</a></li>
-      </ul>
-    </li>
-    <li>Arts
-      <ul>
-        <li><a href="courses.html#eng">English</a></li>
-        <li><a href="courses.html#socio">Sociology</a></li>
-      </ul>
-    </li>
-    <li>Commerce
-      <ul>
-        <li><a href="courses.html#acc">Accounting</a></li>
-        <li><a href="courses.html#eco">Economics</a></li>
-      </ul>
-    </li>
-  </ul>
+  <h2>Our Courses</h2>
+  
+  <div class="course-box">
+    <h2 id="cs">Computer Science</h2>
+    <p>Learn about programming, algorithms, and databases.</p>
+  </div>
+  
+  <div class="course-box">
+    <h2 id="math">Mathematics</h2>
+    <p>Deep dive into calculus, algebra, and statistics.</p>
+  </div>
+
+  <div class="course-box">
+    <h2 id="eng">English</h2>
+    <p>Explore literature, poetry, and communication skills.</p>
+  </div>
+
+  <div class="course-box">
+    <h2 id="socio">Sociology</h2>
+    <p>Study human societies and social behavior.</p>
+  </div>
 </section>
 
 <footer>
-  <p>&copy; 2025 IET College. All rights reserved.</p>
+  <p>&copy; 2025 XYZ College. All rights reserved.</p>
 </footer>
 
 </body>

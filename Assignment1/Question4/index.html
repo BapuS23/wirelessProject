@@ -7,25 +7,40 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
         }
-        h2 {
-            font-size: 20px;
-            font-weight: bold;
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 60%;
         }
-        h3 {
-            font-size: 18px;
-            font-weight: bold;
+        h2, h3 {
+            color: #333;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 5px;
         }
         ol, ul {
-            margin-left: 30px;
+            padding-left: 20px;
+        }
+        ol li, ul li {
+            margin-bottom: 8px;
         }
         dt {
             font-weight: bold;
+            color: #007BFF;
+        }
+        dd {
+            margin-bottom: 10px;
         }
         a {
             text-decoration: none;
-            color: blue;
+            color: #007BFF;
             font-weight: bold;
         }
         a:hover {
@@ -34,56 +49,34 @@
     </style>
 </head>
 <body>
-
-    <h2>HTML List: Ordered, Unordered & Definition List</h2>
-    <p><strong>Following is the list of proposed student activities like:</strong></p>
-
-    <!-- Ordered List -->
-    <ol>
-        <li>Develop programs related with unit vice topics in computer laboratory.</li>
-        <li>Develop any module of to be useful in real life application.</li>
-        <li>Multimedia presentation of module developed by students.</li>
-    </ol>
-
-    <h3>List of Software/Learning Websites</h3>
-    
-    <!-- Unordered List -->
-    <ul>
-        <li>
-            <a href="https://www.w3schools.com/asp" target="_blank">ASP Tutorial - W3Schools</a><br>
-            <a href="https://www.w3schools.com/asp" target="_blank">www.w3schools.com/asp</a>
-        </li>
-        <li>
-            <a href="https://www.webwiz.co.uk" target="_blank">Classic ASP Tutorials & Articles - Web Wiz</a><br>
-            <a href="https://www.webwiz.co.uk" target="_blank">www.webwiz.co.uk - Knowledgebase</a>
-        </li>
-        <li>
-            <a href="https://www.w3schools.com/html" target="_blank">HTML Tutorial - W3Schools</a><br>
-            <a href="https://www.w3schools.com/html" target="_blank">www.w3schools.com/html</a>
-        </li>
-        <li>
-            <a href="https://www.csstutorial.net" target="_blank">CSS Tutorial</a><br>
-            <a href="https://www.csstutorial.net" target="_blank">www.csstutorial.net</a>
-        </li>
-        <li>
-            <a href="https://www.tutorialspoint.com/vbscript/index.htm" target="_blank">VBScript Tutorial - Tutorials Point</a><br>
-            <a href="https://www.tutorialspoint.com/vbscript/index.htm" target="_blank">www.tutorialspoint.com/vbscript/index.htm</a>
-        </li>
-        <li>
-            <a href="https://www.w3schools.com/ADO/default.asp" target="_blank">ADO Tutorial - W3Schools</a><br>
-            <a href="https://www.w3schools.com/ADO/default.asp" target="_blank">www.w3schools.com/ADO/default.asp</a>
-        </li>
-    </ul>
-
-    <!-- Definition List -->
-    <h3>Definition List</h3>
-    <dl>
-        <dt>HTML</dt>
-        <dd>Hyper Text Markup Language</dd>
-
-        <dt>XML</dt>
-        <dd>eXtensible Markup Language</dd>
-    </dl>
-
+    <div class="container">
+        <h2>HTML Lists: Ordered, Unordered & Definition</h2>
+        <p><strong>Following are the proposed student activities:</strong></p>
+        
+        <h3>Ordered List</h3>
+        <ol>
+            <li>Develop programs related to various topics in a computer lab.</li>
+            <li>Work on real-life application modules.</li>
+            <li>Present multimedia modules developed by students.</li>
+        </ol>
+        
+        <h3>Useful Learning Websites</h3>
+        <ul>
+            <li><a href="https://www.w3schools.com/html" target="_blank">HTML Tutorial - W3Schools</a></li>
+            <li><a href="https://www.w3schools.com/css" target="_blank">CSS Tutorial - W3Schools</a></li>
+            <li><a href="https://www.tutorialspoint.com/javascript" target="_blank">JavaScript Tutorial - Tutorials Point</a></li>
+            <li><a href="https://www.w3schools.com/asp" target="_blank">ASP Tutorial - W3Schools</a></li>
+        </ul>
+        
+        <h3>Definition List</h3>
+        <dl>
+            <dt>HTML</dt>
+            <dd>HyperText Markup Language</dd>
+            <dt>CSS</dt>
+            <dd>Cascading Style Sheets</dd>
+            <dt>JS</dt>
+            <dd>JavaScript - Programming Language for Web</dd>
+        </dl>
+    </div>
 </body>
 </html>

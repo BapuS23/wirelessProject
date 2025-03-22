@@ -1,143 +1,141 @@
-/* General Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    scroll-behavior: smooth;
-    transition: background 0.3s, color 0.3s;
+    background: #f4f4f4;
+    color: #333;
 }
 
-/* Dark Mode Variables */
-:root {
-    --bg-color: #ffffff;
-    --text-color: #333;
-    --primary-color: #ff5733;
-}
-.dark-mode {
-    --bg-color: #1a1a1a;
-    --text-color: #f4f4f4;
-}
-
-/* Header & Navigation */
 header {
-    background: var(--primary-color);
-    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    padding: 15px 50px;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
 }
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    padding: 0;
-}
-nav ul li {
-    margin: 0 20px;
-}
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s;
-}
-nav ul li a:hover {
-    color: #222;
+    gap: 20px;
 }
 
-/* Hero Section */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff5733;
+}
+
 .hero {
-    background: url('https://source.unsplash.com/1600x900/?nature,water') center/cover;
+    background: url('https://source.unsplash.com/1600x900/?technology') center/cover;
     height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
     color: white;
     position: relative;
 }
-.hero::after {
-    content: "";
+
+.hero .overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
     background: rgba(0, 0, 0, 0.5);
 }
+
 .hero-content {
     position: relative;
     z-index: 2;
 }
-.hero h1 {
-    font-size: 50px;
-    animation: fadeIn 2s;
-}
-.hero p {
-    font-size: 22px;
-}
+
 .btn {
-    background: var(--primary-color);
+    background: #ff5733;
     color: white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    transition: background 0.3s;
-}
-.btn:hover {
-    background: #ff4500;
+    transition: 0.3s;
 }
 
-/* Content Sections */
-.content-section {
-    padding: 50px;
-    text-align: center;
+.btn:hover {
+    background: #e04e20;
 }
+
+.section {
+    padding: 80px 20px;
+    text-align: center;
+    background: white;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
 .card {
-    background: #f8f8f8;
+    background: #fff;
     padding: 20px;
-    margin: 20px;
-    display: inline-block;
-    border-radius: 10px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
     transition: transform 0.3s;
 }
+
 .card:hover {
     transform: scale(1.05);
 }
 
-/* Footer */
+.card i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #ff5733;
+}
+
 footer {
     text-align: center;
-    padding: 20px;
-    background: var(--primary-color);
+    background: #222;
     color: white;
+    padding: 20px 0;
 }
-.social-icons a {
+
+.socials a {
     color: white;
     font-size: 20px;
     margin: 0 10px;
-    text-decoration: none;
+    transition: 0.3s;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+.socials a:hover {
+    color: #ff5733;
 }
 
-/* Parallax Effect */
-.hero {
-    background-attachment: fixed;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
         text-align: center;
     }
-    .card {
-        width: 90%;
+    .grid {
+        flex-direction: column;
     }
 }

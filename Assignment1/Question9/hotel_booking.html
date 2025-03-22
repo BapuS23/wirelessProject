@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking | Asian Tourism</title>
+    <style>
+        /* Global Styles */
+        body { font-family: 'Poppins', sans-serif; background: linear-gradient(to right, rgba(13, 27, 42, 0.9), rgba(198, 156, 62, 0.9)); color: white; margin: 0; padding: 0; text-align: center; }
+
+        /* Header */
+        header { background: #0D1B2A; color: white; padding: 20px; display: flex; justify-content: space-between; align-items: center; text-transform: uppercase; font-weight: bold; }
+        .logo { width: 90px; }
+        .header-links { display: flex; gap: 20px; }
+        .header-links a { text-decoration: none; color: white; font-size: 16px; padding: 10px 15px; background: #C69C3E; border-radius: 8px; transition: 0.3s; }
+        .header-links a:hover { background: #B8860B; color: white; }
+
+        /* Booking Section */
+        .booking-container { max-width: 600px; background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px; margin: 30px auto; text-align: left; }
+        .booking-container h2 { color: #FFD700; text-align: center; }
+        .booking-container p { font-size: 14px; opacity: 0.8; text-align: center; }
+        form { display: flex; flex-direction: column; gap: 12px; }
+        label { font-weight: bold; color: #F4C531; }
+        input, select { padding: 10px; border-radius: 5px; border: none; outline: none; font-size: 14px; }
+        button { background: #F4C531; color: #1E3A8A; padding: 12px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold; text-transform: uppercase; }
+        button:hover { background: #FFD700; }
+
+        /* Footer */
+        footer { text-align: center; padding: 15px; background: #14213D; color: white; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <img src="images/logo.png" alt="City Logo" class="logo">
+        <div class="header-links">
+            <a href="index.html">Home</a>
+            <a href="heritage.html">Heritage</a>
+            <a href="hotel-booking.html">Hotel Booking</a>
+            <a href="gallery.html">Gallery</a>
+
+        </div>
+    </header>
+
+    <!-- Booking Section -->
+    <section>
+        <div class="booking-container">
+            <h2>Book Your Stay</h2>
+            <p>Find the perfect stay in our heritage cities. Enjoy world-class amenities and excellent service.</p>
+            
+            <form>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" id="checkin" required>
+
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" id="checkout" required>
+
+                <label for="room">Room Type:</label>
+                <select id="room">
+                    <option>Single Room - Cozy & Budget Friendly</option>
+                    <option>Double Room - Perfect for Couples</option>
+                    <option>Luxury Suite - Exclusive & Spacious</option>
+                </select>
+
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Asian Tourism. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
